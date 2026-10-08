@@ -1,0 +1,12 @@
+/build/
+/signing/
+/local.properties
+*.apk
+*.aab
+*.p12
+*.jks
+*.keystore
+password.txt
+.env
+.env.*
+.DS_Store
