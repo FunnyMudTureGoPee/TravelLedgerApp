@@ -18,6 +18,12 @@ Android 8.0+ 的旅行记账应用，当前版本 1.6。
 
 双端写入不是分布式事务，先远端后本机；成功后才更新共同快照，并用版本检查避免覆盖并发修改。每次本机同步修改前保留备份，最近 5 份可从 App 导出。单次同步 JSON（包含照片）最多 32 MB。停止共享会暂停同步并拒绝自动接收；重新扫码或展示邀请可恢复。卸载或清除应用数据会删除本机账本、身份和同步历史。
 
+## 下载已签名安装包
+
+在 [GitHub Releases](https://github.com/FunnyMudTureGoPee/TravelLedgerApp/releases/tag/v1.6) 下载 `TravelLedgerApp-v1.6.apk`。这个已构建 APK 使用原签名，可以覆盖安装以前的轻记账版本；升级前建议导出备份。
+
+`releases/v1.6/` 保存用于发布的原签名产物、SHA-256 与说明，发布工作流只校验并上传，不依赖 Android SDK。私钥及密码不在仓库中。
+
 ## 构建
 
 需要 Linux/macOS、JDK 17、Python 3，以及 Android SDK 的 `platforms;android-35` 和 `build-tools;35.0.0`。项目直接调用 Android 构建工具，不依赖 Gradle。

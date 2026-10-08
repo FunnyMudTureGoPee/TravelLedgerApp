@@ -10,3 +10,6 @@ password.txt
 .env
 .env.*
 .DS_Store
+
+# Explicitly version the signed public install package used for Releases.
+!/releases/v1.6/TravelLedgerApp-v1.6.apk
